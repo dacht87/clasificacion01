@@ -1,15 +1,20 @@
 import numpy as np
 import pandas as pd
-
+import sys
+import io
 import tensorflow as tf
 from tensorflow.keras import Sequential,layers
 
+# Asegúrate de que la salida estándar use UTF-8
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+
 print(tf.__version__)
+print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
 
 path="Tabla 2.xlsx"
 #dataset=pd.read_excel(path,0)
 #dataset=pd.read_excel(path,sheet_name="Lince")
-dataset=pd.read_excel(path)
+dataset=pd.read_excel(path, engine='openpyxl')
 dataset.head(7)
 
 dataset.info()
