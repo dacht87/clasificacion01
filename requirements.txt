@@ -5,4 +5,4 @@ tensorflow==2.5.0
 numpy
 openpyxl
 pandas
-scikit-learn
+scikit-learn #instalar apt-get install python3-sklearn
