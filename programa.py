@@ -3,6 +3,7 @@ import json
 import numpy as np
 from tensorflow.keras.models import model_from_json
 
+# Compilado en la versión 3.6.9 (default, Jan 26 2021, 15:33:00)
 print("Version de Python: ", sys.version)
 
 # Cargar la estructura del modelo desde el archivo JSON
